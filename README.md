@@ -23,3 +23,9 @@ docker run -it --rm -d -p 3000:80 awslogs-gui
 ```
 
 Of course, you can start it by `yarn && yarn dev` instead of `docker`, because it is a node based project.
+
+## TODO
+
+- Stream fetching for logs
+- Make more parameters configurable
+- Caching by PWA or LocalStorage
