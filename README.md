@@ -13,6 +13,8 @@ You need to set environment `AWS_blah_blah_blah` or mount `~/.aws` to tell your 
 docker run -it --rm -d -p 5000:5000 -v "$HOME/.aws:/root/.aws" -e CORS_ALLOW_ORIGIN=http://localhost:3000 yamitzky/awslogs-api
 ```
 
+Then build and run.
+
 ```
 git clone https://github.com/yamitzky/awslogs-gui.git
 cd awslogs-gui
@@ -20,3 +22,4 @@ docker build -t awslogs-gui --build-arg API_BASE_URL=http://localhost:5000/ .
 docker run -it --rm -d -p 3000:80 awslogs-gui
 ```
 
+Of course, you can start it by `yarn && yarn dev` instead of `docker`, because it is a node based project.
